@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    compileSdk = 32
+    compileSdk = 33
     defaultConfig {
         applicationId = "io.github.jhoshina.wpb"
         minSdk = 21
-        targetSdk = 32
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -37,12 +37,12 @@ dependencies {
     val kotlinVersion: String by project
     implementation(fileTree("dir" to "libs", "include" to listOf("*.jar")))
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion")
-    implementation("androidx.appcompat:appcompat:1.7.0-alpha03")
-    implementation("androidx.constraintlayout:constraintlayout:2.2.0-alpha12")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.recyclerview:recyclerview:1.3.1")
     implementation("androidx.cardview:cardview:1.0.0")
     implementation("androidx.paging:paging-runtime:3.2.0")
-    implementation("androidx.browser:browser:1.6.0")
+    implementation("androidx.browser:browser:1.5.0")
     implementation("androidx.fragment:fragment-ktx:1.6.1")
     implementation("com.squareup.retrofit2:retrofit:2.5.0")
     implementation("com.squareup.retrofit2:converter-gson:2.5.0")
