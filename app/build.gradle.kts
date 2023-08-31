@@ -1,7 +1,6 @@
 plugins {
     id("com.android.application")
     kotlin("android")
-    kotlin("android.extensions")
     kotlin("kapt")
 }
 
@@ -31,6 +30,7 @@ android {
     dataBinding {
         isEnabled = true
     }
+    namespace = "io.github.jhoshina.wpb"
 }
 
 dependencies {
@@ -41,7 +41,6 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.0.0-beta4")
     implementation("androidx.recyclerview:recyclerview:1.2.0-alpha01")
     implementation("androidx.cardview:cardview:1.0.0")
-    implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
     implementation("androidx.paging:paging-runtime:2.1.1")
     implementation("androidx.browser:browser:1.2.0")
     implementation("androidx.fragment:fragment-ktx:1.2.2")
