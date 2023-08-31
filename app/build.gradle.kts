@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    compileSdkVersion(31)
+    compileSdk = 32
     defaultConfig {
         applicationId = "io.github.jhoshina.wpb"
-        minSdkVersion(21)
-        targetSdkVersion(31)
+        minSdk = 21
+        targetSdk = 32
         versionCode = 1
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -28,7 +28,7 @@ android {
         jvmTarget = "1.8"
     }
     dataBinding {
-        isEnabled = true
+        enable = true
     }
     namespace = "io.github.jhoshina.wpb"
 }
