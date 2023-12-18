@@ -1,17 +1,17 @@
 plugins {
-    id("com.android.application")
-    kotlin("android")
-    kotlin("kapt")
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin)
+    alias(libs.plugins.kapt)
 }
 
 android {
-    compileSdk = 33
+    compileSdk = 34
     defaultConfig {
         applicationId = "io.github.jhoshina.wpb"
         minSdk = 21
-        targetSdk = 33
-        versionCode = 1
-        versionName = "1.0"
+        targetSdk = 34
+        versionCode = 2
+        versionName = "1.1"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -34,28 +34,25 @@ android {
 }
 
 dependencies {
-    val kotlinVersion: String by project
-    implementation(fileTree("dir" to "libs", "include" to listOf("*.jar")))
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("androidx.recyclerview:recyclerview:1.3.1")
-    implementation("androidx.cardview:cardview:1.0.0")
-    implementation("androidx.paging:paging-runtime:3.2.0")
-    implementation("androidx.browser:browser:1.5.0")
-    implementation("androidx.fragment:fragment-ktx:1.6.1")
-    implementation("com.squareup.retrofit2:retrofit:2.5.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.5.0")
-    implementation("com.squareup.okhttp3:okhttp:3.12.1")
-    implementation("com.squareup.okhttp3:logging-interceptor:3.12.1")
-    implementation("com.jakewharton.timber:timber:4.7.1")
-    implementation("org.jsoup:jsoup:1.13.1")
-    implementation("com.facebook.stetho:stetho:1.5.0")
-    implementation("com.facebook.stetho:stetho-okhttp3:1.5.0")
-    implementation("com.github.bumptech.glide:glide:4.8.0") {
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.recyclerview)
+    implementation(libs.androidx.cardview)
+    implementation(libs.androidx.paging.runtime)
+    implementation(libs.androidx.browser)
+    implementation(libs.androidx.fragment.ktx)
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.converter.gson)
+    implementation(libs.okhttp)
+    implementation(libs.okhttp.logging.interceptor)
+    implementation(libs.timber)
+    implementation(libs.jsoup)
+    implementation(libs.stetho)
+    implementation(libs.stetho.okhttp3)
+    implementation(libs.glide) {
         exclude(mapOf("group" to "com.android.support"))
     }
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test:runner:1.5.2")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.runner)
+    androidTestImplementation(libs.androidx.espresso.core)
 }
